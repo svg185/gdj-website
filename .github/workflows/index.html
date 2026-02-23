@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.D.J.M. Sr. Sec. School | Excellence in Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <div class="phone-container">
+        <header class="header-section">
+            <div class="logo-box">
+                <img src="gdj logo.jpeg" alt="GDJM School Logo" class="top-logo-image">
+            </div>
+            <p class="tagline">Empowering Minds, Shaping Futures</p>
+        </header>
+
+        <main class="content-card">
+            <section class="hero-text">
+                <h1 class="school-name">G. D. J. M. Sr. Sec. School</h1>
+                <p class="sub-motto">Success Is Our Aim</p>
+                <div class="affiliation-badge">CBSE Affiliated | No. 3530484</div>
+            </section>
+
+            <div class="announcement-bar" role="status" aria-live="polite">
+                <div class="marquee">
+                    <span>Admissions Open for 2026-27 | Special Scholarship for Early Applicants | Limited Seats Available</span>
+                </div>
+            </div>
+
+            <section class="hours-container glass-effect">
+                <div class="hours-header">
+                    <div class="clock-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="hours-title-text">
+                        <h4>Campus Status</h4>
+                        <p id="liveTime">Loading...</p>
+                    </div>
+                </div>
+                <div class="status-row">
+                    <span id="openStatus" class="status-badge">Checking...</span>
+                </div>
+                <div id="hoursRows" class="hours-list"></div>
+            </section>
+
+            <section class="gallery-section">
+                <h2 class="section-title">Campus Life</h2>
+                <div id="galleryWrapper" class="gallery-wrapper">
+                    <div id="galleryGrid" class="gallery-scroll"></div>
+                </div>
+            </section>
+
+            <section class="video-section">
+                <h2 class="section-title">Virtual Tour</h2>
+                <div class="video-wrapper">
+                    <video class="promo-video" controls preload="metadata">
+                        <source src="20.mp4" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                </div>
+            </section>
+        </main>
+
+        <button id="fab" class="fab ripple" title="Enrol Now" aria-label="Open admission inquiry form">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>
+
+    <div id="contactModal" class="modal" aria-hidden="true">
+        <div class="modal-card">
+            <button class="modal-close" data-close aria-label="Close dialog">&times;</button>
+            <div class="contact-form">
+                <h3>Admission Inquiry</h3>
+                <form id="enrolForm">
+                    <input type="text" placeholder="Student Name" required>
+                    <input type="tel" placeholder="Mobile Number" required>
+                    <select id="classSelect" required>
+                        <option value="">Select Class</option>
+                        <option>Primary</option>
+                        <option>Secondary</option>
+                        <option>Senior Secondary</option>
+                    </select>
+                    <button type="submit" class="submit-btn">Submit Details</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
