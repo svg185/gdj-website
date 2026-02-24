@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-navy: #071a2f;
     --bg-blue: #0e2e54;
@@ -244,6 +248,33 @@ body {
     transition: transform 0.2s ease;
 }
 
+.gallery-scroll iframe {
+    width: 190px;
+    height: 130px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(12, 42, 74, 0.18);
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+}
+
+.top-menu {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 60;
+}
+
+.top-menu .menu-link {
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 .gallery-scroll img:hover {
     transform: translateY(-3px);
 }
@@ -253,6 +284,28 @@ body {
     overflow: hidden;
     border: 1px solid var(--border);
     background: #000;
+}
+
+.contact-section {
+    margin-top: 20px;
+    background: #fafcfd;
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid var(--border);
+}
+
+.contact-section .contact-details p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+.contact-section .contact-details a {
+    color: var(--primary-deep);
+    text-decoration: none;
+}
+
+.contact-section .contact-details a:hover {
+    text-decoration: underline;
 }
 
 .promo-video {
