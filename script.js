@@ -156,12 +156,12 @@ const setupModal = () => {
     });
 
     if (form) {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            alert("Thank you! Our admission team will contact you shortly.");
-            form.reset();
-            modal.classList.remove("show");
-            modal.setAttribute("aria-hidden", "true");
+        form.addEventListener("submit", () => {
+            const submitBtn = form.querySelector("button[type='submit']");
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Sending...";
+            }
         });
     }
 };
