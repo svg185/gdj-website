@@ -253,15 +253,21 @@
             <button class="modal-close" data-close aria-label="Close dialog">&times;</button>
             <div class="contact-form">
                 <h3>Admission Inquiry</h3>
-                <form id="enrolForm">
-                    <input type="text" placeholder="Student Name" required>
-                    <input type="tel" placeholder="Mobile Number" required>
-                    <select id="classSelect" required>
+                <form id="enrolForm" action="https://formsubmit.co/kumarkartik2146@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New Admission Inquiry - GDJM School Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="student_name" placeholder="Student Name" required>
+                    <input type="tel" name="mobile_number" placeholder="Mobile Number" required>
+                    <select id="classSelect" name="class_applying_for" required>
                         <option value="">Select Class</option>
                         <option>Primary</option>
                         <option>Secondary</option>
                         <option>Senior Secondary</option>
                     </select>
+                    <input type="text" name="parent_name" placeholder="Parent Name (Optional)">
+                    <textarea name="message" placeholder="Message (Optional)" rows="3"></textarea>
                     <button type="submit" class="btn btn-primary full">Submit Details</button>
                 </form>
             </div>
