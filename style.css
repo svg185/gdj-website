@@ -580,7 +580,8 @@ body {
 }
 
 #enrolForm input,
-#enrolForm select {
+#enrolForm select,
+#enrolForm textarea {
     width: 100%;
     border: 1px solid #d7e3f2;
     border-radius: 8px;
@@ -590,7 +591,8 @@ body {
 }
 
 #enrolForm input:focus,
-#enrolForm select:focus {
+#enrolForm select:focus,
+#enrolForm textarea:focus {
     outline: 2px solid #d5e4ff;
     border-color: #9dbbe7;
 }
