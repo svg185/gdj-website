@@ -19,7 +19,7 @@ const SCHOOL_DATA = {
         {
             eyebrow: "Join Now | Learn From Today",
             title: "Education Creates A Better Future",
-            subtitle: "A nurturing campus where academics, values, sports, and technology shape confident learners."
+            subtitle: "A nurturing campus where academics, values, discipline and activities shape confident learners."
         },
         {
             eyebrow: "Admissions Open | Session 2026-27",
@@ -29,7 +29,7 @@ const SCHOOL_DATA = {
         {
             eyebrow: "Growth With Discipline",
             title: "Strong Values. Strong Foundation.",
-            subtitle: "We guide every child toward excellence in academics, personality, and responsible citizenship."
+            subtitle: "We guide every child toward excellence in academics, personality and responsible citizenship."
         }
     ]
 };
@@ -76,18 +76,16 @@ const updateLiveStatus = () => {
     const jsDay = now.getDay();
     const dayIndex = jsDay === 0 ? 6 : jsDay - 1;
     const dayData = SCHOOL_DATA.timings[dayIndex];
-
     const currentHour = now.getHours();
     const isOpen = dayData.open != null && currentHour >= dayData.open && currentHour < dayData.close;
 
     badge.textContent = isOpen ? "Campus Open" : "Campus Closed";
-    badge.style.color = isOpen ? "#1f8f54" : "#cf2c43";
+    badge.style.color = isOpen ? "#198754" : "#d7383e";
 };
 
 const getYouTubeEmbed = (url) => {
     const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([A-Za-z0-9_-]+)/);
-    if (match) return `https://www.youtube.com/embed/${match[1]}`;
-    return url;
+    return match ? `https://www.youtube.com/embed/${match[1]}` : url;
 };
 
 const renderGallery = () => {
@@ -95,7 +93,7 @@ const renderGallery = () => {
     if (!grid) return;
 
     const imageElems = SCHOOL_DATA.galleryImages
-        .map((file, index) => `<img src="${file}" alt="Campus photo ${index + 1}" loading="lazy">`)
+        .map((file, idx) => `<img src="${file}" alt="Campus photo ${idx + 1}" loading="lazy">`)
         .join("");
 
     const videoElems = SCHOOL_DATA.galleryVideos
@@ -109,7 +107,7 @@ const setupHeroSlider = () => {
     const eyebrow = document.getElementById("heroEyebrow");
     const title = document.getElementById("heroTitle");
     const subtitle = document.getElementById("heroSubtitle");
-    if (!eyebrow || !title || !subtitle || !SCHOOL_DATA.heroSlides.length) return;
+    if (!eyebrow || !title || !subtitle) return;
 
     let index = 0;
     setInterval(() => {
@@ -126,10 +124,7 @@ const setupNavbar = () => {
     const links = document.getElementById("navLinks");
     if (!toggle || !links) return;
 
-    toggle.addEventListener("click", () => {
-        links.classList.toggle("open");
-    });
-
+    toggle.addEventListener("click", () => links.classList.toggle("open"));
     links.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => links.classList.remove("open"));
     });
@@ -139,35 +134,36 @@ const setupModal = () => {
     const fab = document.getElementById("fab");
     const modal = document.getElementById("contactModal");
     const form = document.getElementById("enrolForm");
+    if (!fab || !modal) return;
 
-    if (fab && modal) {
-        fab.addEventListener("click", () => {
-            modal.classList.add("show");
-            modal.setAttribute("aria-hidden", "false");
-        });
-    }
+    fab.addEventListener("click", () => {
+        modal.classList.add("show");
+        modal.setAttribute("aria-hidden", "false");
+    });
 
     document.querySelectorAll("[data-close]").forEach((btn) => {
         btn.addEventListener("click", () => {
-            modal?.classList.remove("show");
-            modal?.setAttribute("aria-hidden", "true");
+            modal.classList.remove("show");
+            modal.setAttribute("aria-hidden", "true");
         });
     });
 
-    modal?.addEventListener("click", (event) => {
+    modal.addEventListener("click", (event) => {
         if (event.target === modal) {
             modal.classList.remove("show");
             modal.setAttribute("aria-hidden", "true");
         }
     });
 
-    form?.addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("Thank you! Our admission team will contact you shortly.");
-        form.reset();
-        modal?.classList.remove("show");
-        modal?.setAttribute("aria-hidden", "true");
-    });
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("Thank you! Our admission team will contact you shortly.");
+            form.reset();
+            modal.classList.remove("show");
+            modal.setAttribute("aria-hidden", "true");
+        });
+    }
 };
 
 const setupYear = () => {
