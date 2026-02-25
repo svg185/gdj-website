@@ -13,24 +13,24 @@ const SCHOOL_DATA = {
         "https://youtu.be/CBU4HfYsT1o?si=NGH26H_8vNph6kkV",
         "https://youtu.be/si1MOlBPox4?si=CObkoDV9u-IkeVM7",
         "https://youtu.be/XOvtZP4wXaI?si=7i2eN5C10RlgXpoD",
-        "https://youtu.be/pWzgrnYlbGg?si=EN-2ODcekoQXyFrA",
-        "https://youtu.be/VBSr-znNtCs?si=X6JfKwQAu4tr6dSw",
-        "https://youtu.be/DNG-jwG3tDM?si=6kc_c7DOsW1IrLz_",
-        "https://youtu.be/89dnJhfWKx8?si=5Lj7Jj67ACOS9jzT",
-        "https://youtu.be/NRjQcklI_F8?si=7gTSn6jF3esAzwQ6",
-        "https://youtu.be/hZRL5J2L9JQ?si=LnLM4zE2xnR6tGyf",
-        "https://youtu.be/IrUWXqnkQo0?si=o1hl7vCGyGVypDG4",
-        "https://youtu.be/ZLm2kJDWrwM?si=RGle-QRU58f92lX0",
-        "https://youtu.be/3Qhc0_WyGBY?si=brHjkUyj1F7hU9Qt",
-        "https://youtu.be/PJYFhBQh-MA?si=Urv2pPZRADlPIP7J",
-        "https://youtu.be/yQGzpuGmthc?si=37h2ihzaPpQrBYXA",
-        "https://youtu.be/2phNzJOZ8ME?si=_2smi8gbYX81vJcN",
-        "https://youtu.be/MpLY82YCqto?si=CyMJNUSwYxds4UTC",
-        "https://youtu.be/6uHlJ74J7nQ?si=0WjvAWkPVRFhVcSo",
-        "https://youtu.be/2eq2HNPVcp8?si=yKly3GYeK3O5xAT-",
-        "https://youtu.be/pj_of3Eq3h0?si=Lt4e3IoEine4D6Qz",
-        "https://youtu.be/nqgZnK6Uoug?si=CE47TiH9Z3U-P5pz",
-        "https://youtu.be/78QdOCHdSp4?si=MvKy71SQocbj1303"
+        "https://youtu.be/pWzgrnYlbGg?si=EN-2ODcekoQXyFrA"
+    ],
+    heroSlides: [
+        {
+            eyebrow: "Join Now | Learn From Today",
+            title: "Education Creates A Better Future",
+            subtitle: "A nurturing campus where academics, values, sports, and technology shape confident learners."
+        },
+        {
+            eyebrow: "Admissions Open | Session 2026-27",
+            title: "Learning Today, Leading Tomorrow",
+            subtitle: "Experienced faculty, modern facilities, and practical guidance for long-term student success."
+        },
+        {
+            eyebrow: "Growth With Discipline",
+            title: "Strong Values. Strong Foundation.",
+            subtitle: "We guide every child toward excellence in academics, personality, and responsible citizenship."
+        }
     ]
 };
 
@@ -81,7 +81,7 @@ const updateLiveStatus = () => {
     const isOpen = dayData.open != null && currentHour >= dayData.open && currentHour < dayData.close;
 
     badge.textContent = isOpen ? "Campus Open" : "Campus Closed";
-    badge.style.color = isOpen ? "var(--success)" : "var(--danger)";
+    badge.style.color = isOpen ? "#1f8f54" : "#cf2c43";
 };
 
 const getYouTubeEmbed = (url) => {
@@ -102,11 +102,40 @@ const renderGallery = () => {
         .map((url) => `<iframe src="${getYouTubeEmbed(url)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
         .join("");
 
-    const content = imageElems + videoElems;
-    grid.innerHTML = content || "<p>No gallery items found.</p>";
+    grid.innerHTML = imageElems + videoElems;
 };
 
-const setupEventListeners = () => {
+const setupHeroSlider = () => {
+    const eyebrow = document.getElementById("heroEyebrow");
+    const title = document.getElementById("heroTitle");
+    const subtitle = document.getElementById("heroSubtitle");
+    if (!eyebrow || !title || !subtitle || !SCHOOL_DATA.heroSlides.length) return;
+
+    let index = 0;
+    setInterval(() => {
+        index = (index + 1) % SCHOOL_DATA.heroSlides.length;
+        const slide = SCHOOL_DATA.heroSlides[index];
+        eyebrow.textContent = slide.eyebrow;
+        title.textContent = slide.title;
+        subtitle.textContent = slide.subtitle;
+    }, 4500);
+};
+
+const setupNavbar = () => {
+    const toggle = document.getElementById("navToggle");
+    const links = document.getElementById("navLinks");
+    if (!toggle || !links) return;
+
+    toggle.addEventListener("click", () => {
+        links.classList.toggle("open");
+    });
+
+    links.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => links.classList.remove("open"));
+    });
+};
+
+const setupModal = () => {
     const fab = document.getElementById("fab");
     const modal = document.getElementById("contactModal");
     const form = document.getElementById("enrolForm");
@@ -135,18 +164,26 @@ const setupEventListeners = () => {
     form?.addEventListener("submit", (event) => {
         event.preventDefault();
         alert("Thank you! Our admission team will contact you shortly.");
+        form.reset();
         modal?.classList.remove("show");
         modal?.setAttribute("aria-hidden", "true");
-        form.reset();
     });
+};
+
+const setupYear = () => {
+    const year = document.getElementById("year");
+    if (year) year.textContent = String(new Date().getFullYear());
 };
 
 const init = () => {
     renderTimings();
-    renderGallery();
     updateLiveStatus();
     setInterval(updateLiveStatus, 1000);
-    setupEventListeners();
+    renderGallery();
+    setupHeroSlider();
+    setupNavbar();
+    setupModal();
+    setupYear();
 };
 
 window.addEventListener("DOMContentLoaded", init);
