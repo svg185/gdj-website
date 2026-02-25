@@ -6,85 +6,247 @@
     <title>G.D.J.M. Sr. Sec. School | Excellence in Education</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="page-bg" aria-hidden="true"></div>
+    <header class="top-strip">
+        <div class="container top-strip-inner">
+            <p><i class="fa-solid fa-phone"></i> +91 9917417797</p>
+            <p><i class="fa-solid fa-envelope"></i> gdjmschool@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Chorgalia, Haldwani, Uttarakhand</p>
+        </div>
+    </header>
 
-    <nav class="top-menu">
-        <a href="#gallerySection" class="menu-link">Gallery</a>
+    <nav class="main-nav" id="home">
+        <div class="container nav-inner">
+            <a href="#home" class="brand">
+                <img src="gdj logo.jpeg" alt="GDJM School Logo">
+                <div>
+                    <span>G.D.J.M. Sr. Sec. School</span>
+                    <small>Success Is Our Aim</small>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#facilities">Facilities</a>
+                <a href="#events">Events</a>
+                <a href="#gallerySection">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <div class="phone-container">
-        <header class="header-section">
-            <div class="logo-box">
-                <img src="gdj logo.jpeg" alt="GDJM School Logo" class="top-logo-image">
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <p class="hero-eyebrow" id="heroEyebrow">Join Now | Learn From Today</p>
+            <h1 id="heroTitle">Education Creates A Better Future</h1>
+            <p id="heroSubtitle">A nurturing campus where academics, values, discipline and activities shape confident learners.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Admission Open 2026-27</a>
+                <a href="#about" class="btn btn-light">Learn More</a>
             </div>
-            <p class="tagline">Empowering Minds, Shaping Futures</p>
-        </header>
+        </div>
+    </section>
 
-        <main class="content-card">
-            <section class="hero-text">
-                <h1 class="school-name">G. D. J. M. Sr. Sec. School</h1>
-                <p class="sub-motto">Success Is Our Aim</p>
-                <div class="affiliation-badge">CBSE Affiliated | No. 3530484</div>
-            </section>
+    <section class="ticker" aria-live="polite">
+        <div class="container ticker-track">
+            <span>Admissions Open for 2026-27 | Early Application Scholarship | Limited Seats Available</span>
+        </div>
+    </section>
 
-            <div class="announcement-bar" role="status" aria-live="polite">
-                <div class="marquee">
-                    <span>Admissions Open for 2026-27 | Special Scholarship for Early Applicants</span>
+    <main>
+        <section class="section" id="facilities">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Service Categories</p>
+                    <h2>Explore Top Categories</h2>
+                </div>
+                <div class="facility-grid">
+                    <article class="card"><i class="fa-solid fa-book"></i><h3>Smart Library</h3><p>5000+ books with guided reading support.</p></article>
+                    <article class="card"><i class="fa-solid fa-flask"></i><h3>Science Labs</h3><p>Safe and practical lab learning environment.</p></article>
+                    <article class="card"><i class="fa-solid fa-desktop"></i><h3>Computer Lab</h3><p>Modern digital learning with updated systems.</p></article>
+                    <article class="card"><i class="fa-solid fa-futbol"></i><h3>Extra Activities</h3><p>Sports, culture and confidence building programs.</p></article>
                 </div>
             </div>
+        </section>
 
-            <section class="hours-container glass-effect">
-                <div class="hours-header">
-                    <div class="clock-icon"><i class="fa-solid fa-clock"></i></div>
-                    <div class="hours-title-text">
-                        <h4>Campus Status</h4>
+        <section class="section alt" id="about">
+            <div class="container split">
+                <div class="about-image-wrap">
+                    <img src="2.jpeg" alt="Students on campus" class="about-image">
+                </div>
+                <div>
+                    <p class="kicker">About Our School</p>
+                    <h2>Welcome to G.D.J.M. Sr. Sec. School</h2>
+                    <p>Our school focuses on academic excellence, discipline, and values-based education. We help learners develop strong subject knowledge and clear life skills.</p>
+                    <p>From classroom teaching to activities and mentorship, each student receives support that improves performance and confidence.</p>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="why">
+            <div class="container split reverse">
+                <div>
+                    <p class="kicker">Why Choose Us</p>
+                    <h2>Personalized Learning and Better Skill Development</h2>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check"></i> Experienced and student-focused teachers</li>
+                        <li><i class="fa-solid fa-check"></i> Balanced focus on academics and activities</li>
+                        <li><i class="fa-solid fa-check"></i> Safe campus with disciplined environment</li>
+                        <li><i class="fa-solid fa-check"></i> Regular parent communication and guidance</li>
+                    </ul>
+                </div>
+                <div class="about-image-wrap">
+                    <img src="5.jpeg" alt="Classroom activities" class="about-image">
+                </div>
+            </div>
+            <div class="container stats-wrap">
+                <div class="stats-grid">
+                    <article><h3>1:09</h3><p>Teacher Student Ratio</p></article>
+                    <article><h3>15k+</h3><p>Classes Completed</p></article>
+                    <article><h3>97%</h3><p>Parent Satisfaction</p></article>
+                    <article><h3>1000+</h3><p>Student Community</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="management">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Our Management</p>
+                    <h2>Meet Our Management Team</h2>
+                </div>
+                <div class="management-grid">
+                    <article class="person-card">
+                        <img src="3.jpeg" alt="Managing Director">
+                        <h3>Karan Veer Singh Gangola</h3>
+                        <p>Managing Director</p>
+                    </article>
+                    <article class="person-card">
+                        <img src="4.jpeg" alt="Principal">
+                        <h3>Radha Aithani</h3>
+                        <p>Principal</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="events">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Featured Events</p>
+                    <h2>Our Upcoming Events</h2>
+                </div>
+                <div class="event-grid">
+                    <article class="event-card">
+                        <span class="event-date">12 Mar</span>
+                        <h3>Annual Sports Meet</h3>
+                        <p>Inter-house competitions and student achievements celebration.</p>
+                    </article>
+                    <article class="event-card">
+                        <span class="event-date">27 Mar</span>
+                        <h3>Science Exhibition</h3>
+                        <p>Student projects showcasing innovation and practical learning.</p>
+                    </article>
+                    <article class="event-card">
+                        <span class="event-date">09 Apr</span>
+                        <h3>Parent Interaction Day</h3>
+                        <p>Progress discussion and academic planning with parents.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="vision">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Our Identity</p>
+                    <h2>Vision, Mission and Motto</h2>
+                </div>
+                <div class="vmm-grid">
+                    <article><h3>Our Vision</h3><p>To build responsible, skilled and compassionate future citizens.</p></article>
+                    <article><h3>Our Mission</h3><p>To provide quality education through discipline, innovation and values.</p></article>
+                    <article><h3>Our Motto</h3><p>Success Is Our Aim.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="timings">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Campus Hours</p>
+                    <h2>Live School Status</h2>
+                </div>
+                <div class="hours-panel">
+                    <div class="hours-top">
                         <p id="liveTime">Loading...</p>
+                        <span id="openStatus" class="status-badge">Checking...</span>
                     </div>
+                    <div id="hoursRows" class="hours-list"></div>
                 </div>
-                <div class="status-row">
-                    <span id="openStatus" class="status-badge">Checking...</span>
-                </div>
-                <div id="hoursRows" class="hours-list"></div>
-            </section>
+            </div>
+        </section>
 
-            <section id="gallerySection" class="gallery-section">
-                <h2 class="section-title">Campus Life</h2>
-                <div id="galleryWrapper" class="gallery-wrapper">
-                    <div id="galleryGrid" class="gallery-scroll"></div>
+        <section class="section alt" id="gallerySection">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Activities in School</p>
+                    <h2>Campus Life Gallery</h2>
                 </div>
-            </section>
+                <div id="galleryGrid" class="gallery-grid"></div>
+            </div>
+        </section>
 
-            <section class="video-section">
-                <h2 class="section-title">Virtual Tour</h2>
-                <div class="video-wrapper">
-                    <video class="promo-video" controls preload="metadata">
-                        <source src="20.mp4" type="video/mp4">
-                        Your browser does not support video.
-                    </video>
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Students Testimonials</p>
+                    <h2>What Students Say About School</h2>
                 </div>
-            </section>
-
-            <section class="contact-section">
-                <h2 class="section-title">Contact Us</h2>
-                <div class="contact-details">
-                    <p><strong>Address:</strong> CHORGALIA, HALDWANI, UTTRAKHAND ( 263139 )</p>
-                    <p><strong>Phone:</strong> +91 9917417797</p>
-                    <p><strong>Email:</strong> gdjmschool@gmail.com</p>
-                    <p><strong>Website:</strong><a href="https://gdjmpublicschool.com/" target="_blank"> GDJM Public School</a></p>
-                    <p><strong>Location:</strong> <a href="https://www.google.com/maps/place/G+D+J+Memorial+Senior+secondary+school/@29.1181757,79.6986924,17z/data=!3m1!4b1!4m6!3m5!1s0x39a08c80e5555555:0x2520659913b47513!8m2!3d29.1181757!4d79.6986924!16s%2Fg%2F11gbq_vqfy?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">View on Google Maps</a></p>
+                <div class="testimonial-grid">
+                    <article>
+                        <p>School ka environment disciplined hai aur teachers bahut supportive hain.</p>
+                        <h4>Anita Sharma</h4>
+                    </article>
+                    <article>
+                        <p>Academics ke saath sports aur activities par bhi equal focus milta hai.</p>
+                        <h4>Vijay Joshi</h4>
+                    </article>
+                    <article>
+                        <p>Regular guidance se studies aur confidence dono improve hua hai.</p>
+                        <h4>Karan Rawat</h4>
+                    </article>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <button id="fab" class="fab ripple" title="Enrol Now" aria-label="Open admission inquiry form">
-            <i class="fa-solid fa-paper-plane"></i>
-        </button>
-    </div>
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div>
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Chorgalia, Haldwani, Uttarakhand (263139)</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9917417797</p>
+                <p><i class="fa-solid fa-envelope"></i> gdjmschool@gmail.com</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <p><a href="https://gdjmpublicschool.com/" target="_blank" rel="noopener">Official Website</a></p>
+                <p><a href="https://www.google.com/maps/place/G+D+J+Memorial+Senior+secondary+school/@29.1181757,79.6986924,17z/data=!3m1!4b1!4m6!3m5!1s0x39a08c80e5555555:0x2520659913b47513!8m2!3d29.1181757!4d79.6986924!16s%2Fg%2F11gbq_vqfy?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">View on Google Maps</a></p>
+            </div>
+            <div>
+                <h3>Admission Support</h3>
+                <p>Reach us for class-wise availability and fee details.</p>
+                <button id="fab" class="btn btn-primary full" type="button">Send Inquiry</button>
+            </div>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span> G.D.J.M. Sr. Sec. School. All rights reserved.</p>
+    </footer>
 
     <div id="contactModal" class="modal" aria-hidden="true">
         <div class="modal-card">
@@ -100,7 +262,7 @@
                         <option>Secondary</option>
                         <option>Senior Secondary</option>
                     </select>
-                    <button type="submit" class="submit-btn">Submit Details</button>
+                    <button type="submit" class="btn btn-primary full">Submit Details</button>
                 </form>
             </div>
         </div>
