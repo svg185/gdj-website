@@ -31,6 +31,8 @@
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
             <div class="nav-links" id="navLinks">
                 <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#homework">Homework</a>
                 <a href="#facilities">Facilities</a>
                 <a href="#events">Events</a>
                 <a href="#gallerySection">Gallery</a>
@@ -42,34 +44,116 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <p class="hero-eyebrow" id="heroEyebrow">Join Now | Learn From Today</p>
-            <h1 id="heroTitle">Education Creates A Better Future</h1>
-            <p id="heroSubtitle">A nurturing campus where academics, values, discipline and activities shape confident learners.</p>
+            <p class="hero-eyebrow" id="heroEyebrow">Admissions Open | Session 2026-27</p>
+            <h1 id="heroTitle">Shaping Tomorrow's Leaders Today</h1>
+            <p id="heroSubtitle">CBSE affiliated education from Nursery to Class XII with smart classrooms, strong values, and activity-based learning.</p>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-primary">Admission Open 2026-27</a>
-                <a href="#about" class="btn btn-light">Learn More</a>
+                <a href="#contact" class="btn btn-primary">Apply for Admission</a>
+                <a href="#programs" class="btn btn-light">Explore Programs</a>
             </div>
         </div>
     </section>
 
     <section class="ticker" aria-live="polite">
         <div class="container ticker-track">
-            <span>Admissions Open for 2026-27 | Early Application Scholarship</span>
+            <span>Admissions Open for 2026-27 | CBSE Affiliated | Smart Classrooms | Safe Transport</span>
         </div>
     </section>
 
     <main>
+    <section class="section" id="programs">
+        <div class="container">
+            <div class="section-head">
+                <p class="kicker">Our Programs</p>
+                <h2>Academic Streams from Nursery to Class XII</h2>
+            </div>
+            <div class="program-grid">
+                <article class="card">
+                    <h3>Primary School</h3>
+                    <p>Nursery to Class V with play-based learning, English, Hindi, Maths, EVS, and arts.</p>
+                    <ul class="program-list">
+                        <li>Activity-based learning</li>
+                        <li>Individual attention</li>
+                        <li>Holistic development</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Secondary School</h3>
+                    <p>Class VI to X with a CBSE-aligned curriculum, lab practicals, and exam readiness.</p>
+                    <ul class="program-list">
+                        <li>Concept clarity</li>
+                        <li>Project-based learning</li>
+                        <li>Board exam preparation</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Senior Secondary</h3>
+                    <p>Class XI & XII with Science, Commerce, and Arts streams plus career counselling.</p>
+                    <ul class="program-list">
+                        <li>JEE / NEET guidance</li>
+                        <li>Stream-specific coaching</li>
+                        <li>Personality development</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+        <section class="section alt" id="homework">
+            <div class="container">
+                <div class="section-head">
+                    <p class="kicker">Homework Hub</p>
+                    <h2>Classwise Homework Access</h2>
+                </div>
+                <div class="homework-panel">
+                    <div class="homework-controls">
+                        <div class="homework-control-group">
+                            <label for="classHomeworkSelect">Select Class:</label>
+                            <select id="classHomeworkSelect" aria-label="Select class to view homework">
+                                <option value="">Choose Class</option>
+                                <option value="nursery">Nursery</option>
+                                <option value="lkg">LKG</option>
+                                <option value="ukg">UKG</option>
+                                <option value="class1">Class 1</option>
+                                <option value="class2">Class 2</option>
+                                <option value="class3">Class 3</option>
+                                <option value="class4">Class 4</option>
+                                <option value="class5">Class 5</option>
+                                <option value="class6">Class 6</option>
+                                <option value="class7">Class 7</option>
+                                <option value="class8">Class 8</option>
+                                <option value="class9">Class 9</option>
+                                <option value="class10">Class 10</option>
+                                <option value="class11Science">Class 11 (Science)</option>
+                                <option value="class11Commerce">Class 11 (Commerce)</option>
+                                <option value="class12Science">Class 12 (Science)</option>
+                                <option value="class12Commerce">Class 12 (Commerce)</option>
+                            </select>
+                        </div>
+                        <div class="homework-control-group">
+                            <label for="subjectHomeworkSelect">Filter Subject:</label>
+                            <select id="subjectHomeworkSelect" aria-label="Select subject to filter homework">
+                                <option value="">All Subjects</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="homeworkList" class="homework-list">
+                        <p class="homework-empty">Please select your class to view the latest homework.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="facilities">
             <div class="container">
                 <div class="section-head">
-                    <p class="kicker">Service Categories</p>
-                    <h2>Explore Top Categories</h2>
+                    <p class="kicker">World-Class Facilities</p>
+                    <h2>Everything Your Child Needs</h2>
                 </div>
                 <div class="facility-grid">
-                    <article class="card"><i class="fa-solid fa-book"></i><h3>Smart Library</h3><p>5000+ books with guided reading support.</p></article>
-                    <article class="card"><i class="fa-solid fa-flask"></i><h3>Science Labs</h3><p>Safe and practical lab learning environment.</p></article>
-                    <article class="card"><i class="fa-solid fa-desktop"></i><h3>Computer Lab</h3><p>Modern digital learning with updated systems.</p></article>
-                    <article class="card"><i class="fa-solid fa-futbol"></i><h3>Extra Activities</h3><p>Sports, culture and confidence building programs.</p></article>
+                    <article class="card"><i class="fa-solid fa-chalkboard"></i><h3>Smart Classrooms</h3><p>Interactive digital teaching spaces for modern learning.</p></article>
+                    <article class="card"><i class="fa-solid fa-book"></i><h3>Library & Resource Centre</h3><p>A well-stocked library with books, digital resources, and research material.</p></article>
+                    <article class="card"><i class="fa-solid fa-futbol"></i><h3>Sports & Fitness</h3><p>Playgrounds, courts, and physical training for strong body and mind.</p></article>
+                    <article class="card"><i class="fa-solid fa-flask"></i><h3>Science Laboratories</h3><p>Fully equipped Physics, Chemistry, and Biology labs for hands-on learning.</p></article>
                 </div>
             </div>
         </section>
@@ -123,14 +207,28 @@
                 </div>
                 <div class="management-grid">
                     <article class="person-card">
-                        <img src="3.jpeg" alt="Managing Director">
-                        <h3>Mrs. Mamta Jangi</h3>
-                        <p>Managing Director</p>
+                        <div class="person-avatar">
+                            <img src="3.jpeg" alt="Mr. Kamlesh Jangi">
+                        </div>
+                        <h3>Mr. Kamlesh Jangi</h3>
+                        <p class="title">Chairman & Founder</p>
+                        <p class="quote">“Education is not the filling of a pail, but the lighting of a fire. We strive to ignite that fire in every student.”</p>
                     </article>
                     <article class="person-card">
-                        <img src="4.jpeg" alt="Principal">
+                        <div class="person-avatar avatar-accent">
+                            <img src="4.jpeg" alt="Mr. Naveen Bisht">
+                        </div>
                         <h3>Mr. Naveen Bisht</h3>
-                        <p>Principal</p>
+                        <p class="title">Principal</p>
+                        <p class="quote">“Every child deserves an education that respects their individuality and nurtures their unique talents and strengths.”</p>
+                    </article>
+                    <article class="person-card">
+                        <div class="person-avatar avatar-soft">
+                            <img src="2.jpeg" alt="Mrs. Mamta Jangi">
+                        </div>
+                        <h3>Mrs. Mamta Jangi</h3>
+                        <p class="title">Manager</p>
+                        <p class="quote">“Academic rigour and personal growth go hand in hand. We help students discover who they are while achieving the best results.”</p>
                     </article>
                 </div>
             </div>
@@ -139,26 +237,37 @@
         <section class="section" id="events">
             <div class="container">
                 <div class="section-head">
-                    <p class="kicker">Featured Events</p>
-                    <h2>Our Upcoming Events</h2>
+                    <p class="kicker">Notices & Events</p>
+                    <h2>Stay Updated With School News</h2>
                 </div>
                 <div class="event-grid">
                     <article class="event-card">
-                        <span class="event-date">12 Mar</span>
-                        <h3>Annual Sports Meet</h3>
-                        <p>Inter-house competitions and student achievements celebration.</p>
+                        <span class="event-date">25 APR</span>
+                        <h3>Annual Prize Distribution</h3>
+                        <p>Important celebration in the school auditorium at 10:00 AM.</p>
                     </article>
                     <article class="event-card">
-                        <span class="event-date">27 Mar</span>
+                        <span class="event-date">10 MAY</span>
+                        <h3>Annual Sports Day</h3>
+                        <p>All students participate in competitive events at the school ground.</p>
+                    </article>
+                    <article class="event-card">
+                        <span class="event-date">15 JUN</span>
                         <h3>Science Exhibition</h3>
-                        <p>Student projects showcasing innovation and practical learning.</p>
-                    </article>
-                    <article class="event-card">
-                        <span class="event-date">09 Apr</span>
-                        <h3>Parent Interaction Day</h3>
-                        <p>Progress discussion and academic planning with parents.</p>
+                        <p>Showcasing student innovation, practical learning, and research projects.</p>
                     </article>
                 </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container cta-panel">
+                <div>
+                    <p class="kicker">Academic Year 2026-27</p>
+                    <h2>Admissions Open for All Classes</h2>
+                    <p>Secure your child’s seat with modern facilities, dedicated teachers, and merit scholarships.</p>
+                </div>
+                <a href="#contact" class="btn btn-primary">Book a Campus Visit</a>
             </div>
         </section>
 
@@ -230,19 +339,22 @@
         <div class="container footer-grid">
             <div>
                 <h3>Contact Us</h3>
-                <p><i class="fa-solid fa-location-dot"></i> Chorgalia, Haldwani, Uttarakhand (263139)</p>
+                <p><i class="fa-solid fa-location-dot"></i> Naya Gaon Katan, Chorgalia, Haldwani, Uttarakhand 263139</p>
                 <p><i class="fa-solid fa-phone"></i> +91 9917417797</p>
-                <p><i class="fa-solid fa-envelope"></i> gdjmschool@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 9410713666</p>
+                <p><i class="fa-solid fa-envelope"></i> info@gdjmpublicschool.com</p>
             </div>
             <div>
                 <h3>Quick Links</h3>
-                <p><a href="https://gdjmpublicschool.com/" target="_blank" rel="noopener">Official Website</a></p>
-                <p><a href="https://www.google.com/maps/place/G+D+J+Memorial+Senior+secondary+school/@29.1181757,79.6986924,17z/data=!3m1!4b1!4m6!3m5!1s0x39a08c80e5555555:0x2520659913b47513!8m2!3d29.1181757!4d79.6986924!16s%2Fg%2F11gbq_vqfy?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">View on Google Maps</a></p>
+                <p><a href="#home">Home</a></p>
+                <p><a href="#about">About Us</a></p>
+                <p><a href="#programs">Programs</a></p>
+                <p><a href="#facilities">Facilities</a></p>
             </div>
             <div>
                 <h3>Admission Support</h3>
-                <p>Reach us for class-wise availability and fee details.</p>
-                <button id="fab" class="btn btn-primary full" type="button">Send Inquiry</button>
+                <p>Book a campus tour, ask about scholarship options, or get fee details.</p>
+                <button id="fab" class="btn btn-primary full" type="button" onclick="openContactModal()">Send Inquiry</button>
             </div>
         </div>
         <p class="copyright">&copy; <span id="year"></span> G.D.J.M. Sr. Sec. School. All rights reserved.</p>
@@ -257,7 +369,7 @@
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_subject" value="New Admission Inquiry - GDJM School Website">
                     <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="_honey" class="hidden-field">
                     <input type="text" name="student_name" placeholder="Student Name" required>
                     <input type="tel" name="mobile_number" placeholder="Mobile Number" required>
                     <select id="classSelect" name="class_applying_for" required>
